@@ -1,6 +1,6 @@
 {
-  "name": "warp-contracts-plugin-deploy",
-  "version": "1.0.9",
+  "name": "weavedb-warp-contracts-plugin-deploy",
+  "version": "1.0.10",
   "description": "A deploy plugin for warp contracts",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -18,7 +18,7 @@
   "scripts": {
     "bundle:web": "node bundle.js",
     "compile:types": "tsc -b tsconfig.types.json",
-    "build": "yarn run clean && tsc -b tsconfig.json && yarn compile:types && yarn bundle:web",
+    "build": "yarn run clean && tsc -b tsconfig.json && yarn compile:types",
     "format": "prettier --write 'src/**/*.ts'",
     "clean": "rimraf ./lib",
     "lint": "eslint . --ext .ts",
@@ -41,8 +41,7 @@
     "bundles/"
   ],
   "dependencies": {
-    "arbundles": "^0.7.3",
-    "arlocal": "^1.1.59",
+    "arbundles": "^0.10.0",
     "node-stdlib-browser": "^1.2.0"
   },
   "peerDependencies": {
